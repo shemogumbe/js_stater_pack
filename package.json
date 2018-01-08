@@ -4,7 +4,11 @@
   "description": "JS boilerplate for large and robust projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "node BuildScripts/startMessage.js",
+    "start": "babel-node BuildScripts/appServer.js",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && mkdir dist && babel BuildScripts -s -d dist",
+    "production": "npm run build && node bin/production"
   },
   "repository": {
     "type": "git",
@@ -23,6 +27,12 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-register": "^6.26.0"
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "chalk": "^2.3.0"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
   }
 }

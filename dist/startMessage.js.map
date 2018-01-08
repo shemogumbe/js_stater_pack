@@ -1,0 +1,1 @@
+{"version":3,"sources":["../BuildScripts/startMessage.js"],"names":["chalk","require","console","log","green"],"mappings":"AAAA,MAAMA,QAAQC,QAAQ,OAAR,CAAd;;AAEAC,QAAQC,GAAR,CAAYH,MAAMI,KAAN,CAAY,gBAAZ,CAAZ","file":"startMessage.js","sourcesContent":["const chalk = require('chalk');\n\nconsole.log(chalk.green('Server started'));\n"]}
